@@ -1,5 +1,5 @@
 {
-  "name": "kinplus",
+  "name": "softeventz",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,9 +10,14 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "particle.js": "^1.0.7",
+    "particles.js": "^2.0.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
+    "vue-particlejs": "^1.1.0",
     "vue-router": "^3.2.0",
+    "vue-typer": "^1.2.0",
+    "vuetify": "^2.4.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -30,7 +35,11 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.2.1",
-    "vue-template-compiler": "^2.6.11"
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.3.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
   },
   "eslintConfig": {
     "root": true,
