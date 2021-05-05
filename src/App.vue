@@ -32,7 +32,7 @@
         <router-view></router-view>
       </main>
 
-      <v-footer color="brown darken-1" dark app>
+      <v-footer color="brown darken-1" dark>
         <footer-page />
       </v-footer>
     </v-app>

@@ -34,9 +34,9 @@ export default {};
     ),
     url(/deco5.jpg);
   background-size: cover;
-
   background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
-
+  width: 100vw;
 }
 </style>

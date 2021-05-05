@@ -14,14 +14,21 @@
           </v-row>
         </div>
 
-        <v-col cols="12" sm="12" md="6" lg="4" v-for="(work, index) in works" :key="index">
+        <v-col
+          cols="12"
+          sm="12"
+          md="6"
+          lg="4"
+          v-for="(work, index) in works"
+          :key="index"
+        >
           <v-hover v-slot="{ hover }">
-            <v-card class="mx-auto" color="orange darken-3" max-width="600">
+            <v-card class="mx-auto" color="brown darken-1" max-width="600">
               <v-img :aspect-ratio="16 / 9" :src="work.image">
                 <v-expand-transition>
                   <div
                     v-if="hover"
-                    class="d-flex transition-fast-in-fast-out orange darken-3 display-3 white--text"
+                    class="d-flex transition-fast-in-fast-out brown darken-1 display-3 white--text"
                     style="height: 100%"
                   >
                     <p class="my-auto mx-auto">
@@ -47,41 +54,35 @@
 export default {
   data: () => ({
     works: [
-            {
+      {
         image: "/cake2.png",
         title: "SoftCake",
-        description:
-          " We bake yummy cakes to attract more patronage.",
+        description: " We bake yummy cakes to attract more patronage.",
       },
       {
         image: "/food.jpg",
         title: "SoftFood",
-        description:
-          " Our Foods are delicious and nice for your consumption.",
+        description: " Our Foods are delicious and nice for your consumption.",
       },
-            {
+      {
         image: "/cake4.jpg",
         title: "SoftCake",
-        description:
-          " We bake yummy cakes to attract more patronage.",
+        description: " We bake yummy cakes to attract more patronage.",
       },
       {
         image: "/ofada.jpg",
         title: "SoftFood",
-        description:
-          " Our Foods are delicious and nice for your consumption.",
+        description: " Our Foods are delicious and nice for your consumption.",
       },
-            {
+      {
         image: "/cake.jpg",
         title: "SoftCake",
-        description:
-          " We bake yummy cakes to attract more patronage.",
+        description: " We bake yummy cakes to attract more patronage.",
       },
       {
         image: "/rice.jpg",
         title: "SoftFood",
-        description:
-          " Our Foods are delicious and nice for your consumption.",
+        description: " Our Foods are delicious and nice for your consumption.",
       },
     ],
   }),

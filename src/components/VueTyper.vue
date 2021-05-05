@@ -5,46 +5,43 @@
         <v-col>
           <h1 class="white--text">Soft Eventz</h1>
         </v-col>
-
-        <!-- <v-btn
-          class="white--text mt-5 hidden-sm-and-down"
-          dark
-          color="blue darken-4"
-          >Join Us</v-btn
-        > -->
       </v-row>
-      <v-row class="mx-auto">
+      <v-row>
         <v-col>
-          <h1 class="home-text">
-            WE
-            <vue-typer
-              :text="[
-                'ADD VALUES TO EVENTS',
-                'TRAIN',
-                'BUILD CONFIDENCE',
-                'CREATE IDENTITY',
-              ]"
-              :repeat="Infinity"
-              :shuffle="true"
-              initial-action="erasing"
-              :pre-type-delay="200"
-              :type-delay="200"
-              :pre-erase-delay="3000"
-              :erase-delay="6000"
-              erase-style="clear"
-              :erase-on-complete="false"
-              caret-animation="blink"
-            ></vue-typer>
-          </h1>
+          <v-row>
+            <v-col>
+              <h1 class="home-text">
+                WE
+                <vue-typer
+                  :text="[
+                    'ADD VALUES TO EVENTS',
+                    'TRAIN',
+                    'ARE DEXTEROUS',
+                    'CREATE IDENTITY',
+                  ]"
+                  :repeat="Infinity"
+                  :shuffle="true"
+                  initial-action="erasing"
+                  :pre-type-delay="200"
+                  :type-delay="200"
+                  :pre-erase-delay="3000"
+                  :erase-delay="6000"
+                  erase-style="clear"
+                  :erase-on-complete="false"
+                  caret-animation="blink"
+                ></vue-typer>
+              </h1>
+            </v-col>
+          </v-row>
 
-          <div class="center">
-            <p class="white--text">
+          <div>
+            <p class="white--text pt-5">
               We help in adding colours and values to your events through proper
               and adequate planning
             </p>
           </div>
 
-          <div class="btn-center pt-3">
+          <div class="pt-3">
             <v-btn dark to="/Contact" color="brown darken-1">
               Get in touch with us
             </v-btn>
