@@ -13,12 +13,7 @@
               <h1 class="home-text">
                 WE
                 <vue-typer
-                  :text="[
-                    'ADD VALUES TO EVENTS',
-                    'TRAIN',
-                    'ARE DEXTEROUS',
-                    'CREATE IDENTITY',
-                  ]"
+                  :text="['ADD VALUES', 'DESIGN', 'CREATE', 'TRAIN']"
                   :repeat="Infinity"
                   :shuffle="true"
                   initial-action="erasing"

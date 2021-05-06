@@ -11,7 +11,6 @@
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-btn color="brown darken-1" class="ma-10" to="/Contact"> Join Us </v-btn>
     </v-list>
   </div>
 </template>
@@ -25,10 +24,9 @@ export default {
     items: [
       { title: "Home", to: "/" },
       { title: "About Us", to: "/About" },
-      { title: "Services", to:"/Services" },
+      { title: "Services", to: "/Services" },
       { title: "Contact Us", to: "/Contact" },
     ],
-    
   }),
 };
 </script>
