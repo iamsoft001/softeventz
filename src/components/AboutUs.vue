@@ -39,7 +39,6 @@ export default {
 <style>
 .about {
   background-color: rgba(44, 5, 5, 0.658);
-
   background-size: cover;
   color: white;
   background-repeat: no-repeat;
