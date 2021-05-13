@@ -22,10 +22,10 @@ export default {
 
   data: () => ({
     items: [
-      { title: "Home", to: "/" },
-      { title: "About Us", to: "/About" },
-      { title: "Services", to: "/Services" },
-      { title: "Contact Us", to: "/Contact" },
+      { title: "Home", to: "/", icon: "home" },
+      { title: "About Us", to: "/About", icon: "information" },
+      { title: "Services", to: "/Services", icon: "poll" },
+      { title: "Contact Us", to: "/Contact", icon: "map-marker" },
     ],
   }),
 };

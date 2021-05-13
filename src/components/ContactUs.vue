@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <v-row class="mx-auto">
+    <v-row class="mx-auto pt-6">
       <v-col cols="12" sm="12" md="6" lg="6" order="3" order-sm="1">
         <v-sheet class="pa-5" color="orange lighten-4">
           <h2>Contact Us:</h2>
@@ -139,7 +139,9 @@ export default {
 <style>
 .contact {
   color: aqua;
-  padding-top: 10px;
-  margin: 50px 0px 50px 0px;
+  background-color: rgba(44, 5, 5, 0.658);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 </style>

@@ -10,5 +10,7 @@ export default {
   components: { ContactUs },
 };
 </script>
-
-<style lang="scss" scoped></style>
+<style>
+::-webkit-scrollbar {
+  display: none;
+}

@@ -36,7 +36,12 @@ export default {};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+ min-height: 100vh;
   width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 </style>

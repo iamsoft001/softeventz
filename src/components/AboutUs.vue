@@ -38,11 +38,11 @@ export default {
 
 <style>
 .about {
-  background-color: gray;
+  background-color: rgba(44, 5, 5, 0.658);
 
   background-size: cover;
   color: white;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
 }
 </style>

@@ -10,10 +10,15 @@
         <v-col>
           <v-row>
             <v-col>
-              <h2 class="home-text">
+              <h3 class="home-text">
                 WE
                 <vue-typer
-                  :text="['ADD VALUES', 'DESIGN', 'CREATE', 'TRAIN']"
+                  :text="[
+                    'ADD VALUES',
+                    'DESIGN',
+                    'CREATE IDENTITY',
+                    'ARE DEXTEROUS',
+                  ]"
                   :repeat="Infinity"
                   :shuffle="true"
                   initial-action="erasing"
@@ -25,7 +30,7 @@
                   :erase-on-complete="false"
                   caret-animation="blink"
                 ></vue-typer>
-              </h2>
+              </h3>
             </v-col>
           </v-row>
 

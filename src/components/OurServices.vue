@@ -397,8 +397,10 @@ export default {
 </script>
 <style>
 .service {
-  background-color: gray;
+  color: aqua;
+  background-color: rgba(44, 5, 5, 0.658);
   background-size: cover;
-  height: 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 </style>
