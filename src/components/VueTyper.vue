@@ -10,7 +10,7 @@
         <v-col>
           <v-row>
             <v-col>
-              <h1 class="home-text">
+              <h2 class="home-text">
                 WE
                 <vue-typer
                   :text="['ADD VALUES', 'DESIGN', 'CREATE', 'TRAIN']"
@@ -25,7 +25,7 @@
                   :erase-on-complete="false"
                   caret-animation="blink"
                 ></vue-typer>
-              </h1>
+              </h2>
             </v-col>
           </v-row>
 
