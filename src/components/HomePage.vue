@@ -33,10 +33,10 @@ export default {};
       rgba(0, 0, 0, 0.4)
     ),
     url(/deco5.jpg);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
- min-height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
   box-sizing: border-box;

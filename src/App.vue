@@ -41,9 +41,9 @@
           </v-col>
         </v-row>
       </v-app-bar>
-      <v-main>
+      <main>
         <router-view></router-view>
-      </v-main>
+      </main>
 
       <v-footer color="brown darken-1" dark>
         <footer-page />
@@ -73,5 +73,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
