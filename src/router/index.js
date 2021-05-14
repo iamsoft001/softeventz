@@ -1,33 +1,33 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-
+import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: () =>
-    import ( /* webpackChunkName: "home" */ "../views/Home.vue")
+    path: "/soft",
+    alias: "/",
+    name: "home",
+    component: Home,
   },
-   {
+  {
     path: "/about",
     name: "about",
     component: () =>
-      import ( /* webpackChunkName: "about" */ "../views/About.vue")
+      import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
-   {
+  {
     path: "/services",
     name: "services",
     component: () =>
-      import ( /* webpackChunkName: "about" */ "../views/Services.vue")
+      import(/* webpackChunkName: "services" */ "../views/Services.vue"),
   },
-   {
+  {
     path: "/contact",
     name: "contact",
     component: () =>
-      import ( /* webpackChunkName: "about" */ "../views/Contact.vue")
+      import(/* webpackChunkName: "contact" */ "../views/Contact.vue"),
   },
 ];
 

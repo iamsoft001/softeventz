@@ -3,11 +3,6 @@
     <v-container>
       <v-row>
         <v-col>
-          <h1 class="white--text">Soft Eventz</h1>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
           <v-row>
             <v-col>
               <h3 class="home-text">

@@ -1,6 +1,15 @@
 <template>
   <div class="contact">
-    <v-row class="mx-auto pt-6">
+    <v-snackbar v-model="snackbar">
+      {{ text }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn color="pink" text v-bind="attrs" @click="snackbar = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
+    <v-row class="mx-auto pt-15">
       <v-col cols="12" sm="12" md="6" lg="6" order="3" order-sm="1">
         <v-sheet class="pa-5" color="orange lighten-4">
           <h2>Contact Us:</h2>
@@ -50,56 +59,56 @@
         <v-card elevation="6" color="orange lighten-4">
           <v-container>
             <v-card-text>
-              <v-form ref="form" v-model="valid">
+              <v-form v-model="valid">
                 <v-text-field
-                  v-model="firstname"
-                  :counter="10"
-                  :rules="nameRules"
+                  label="Name"
+                  v-model="form.fullname"
                   required
-                  label="Firstname"
-                  outlined
-                  dense
-                  rounded
-                  height="2px"
-                  prepend-icon="mdi-account-circle"
-                />
-                <v-text-field
-                  v-model="lastname"
-                  :counter="10"
                   :rules="nameRules"
-                  required
-                  label="Lastname"
-                  outlined
-                  dense
-                  rounded
+                  :counter="30"
                   prepend-icon="mdi-account-circle"
-                />
-
+                ></v-text-field>
                 <v-text-field
-                  v-model="phonenumber"
+                  label="E-mail"
+                  v-model="form.email"
+                  :rules="emailRules"
+                  required
+                  prepend-icon="mdi-email"
+                ></v-text-field>
+                <v-text-field
+                  label="Phone Number"
+                  v-model="form.phoneno"
                   :counter="11"
                   :rules="phoneRules"
-                  outlined
-                  rounded
-                  dense
                   hint="Enter only numbers"
-                  label="Phone No"
                   prepend-icon="mdi-cellphone"
-                />
+                  required
+                ></v-text-field>
+                <v-text-field
+                  label="Subject"
+                  v-model="form.subject"
+                  required
+                  prepend-icon="mdi-comment-text"
+                ></v-text-field>
                 <v-textarea
-                  outlined
-                  name="input-7-4"
+                  rows="2"
                   label="Message"
-                  value=""
+                  v-model="form.msg"
+                  required
+                  prepend-icon="mdi-comment-text"
                 ></v-textarea>
-
-                <v-btn
-                  class="regBtn"
-                  :disabled="!valid"
-                  color="brown"
-                  @click="show_alert()"
-                  >Submit</v-btn
-                >
+                <v-divider></v-divider>
+                <v-card-actions>
+                  <v-btn to="/" dark>Cancel</v-btn>
+                  <v-spacer></v-spacer>
+                  <v-btn
+                    :disabled="!valid"
+                    color="#6d4c41"
+                    @click="submitForm"
+                    :loading="loading"
+                    >Submit</v-btn
+                  >
+                </v-card-actions>
               </v-form>
             </v-card-text>
           </v-container>
@@ -110,28 +119,52 @@
 </template>
 
 <script>
+import { apiClient } from "@/services";
 export default {
   name: "Contact",
-  data: () => ({
-    valid: true,
-    firstname: "",
-    lastname: "",
-    userRules: [(v) => !!v || "Name is required"],
-    nameRules: [
-      (v) => !!v || "Name is required",
-      (v) => (v && v.length <= 10) || "Name must be less",
-    ],
-    phonenumber: "",
-    phoneRules: [(v) => (v && v.length <= 11) || "Number must be less"],
-  }),
-  methods: {
-    submit() {
-      this.$refs.form.submit();
-    },
+  data() {
+    return {
+      form: this.initializeForm(),
+      snackbar: false,
+      loading: false,
+      text: "Message submitted successfully",
+      valid: true,
+      firstname: "",
 
-    show_alert() {
-      alert("Message Sent Successfully");
+      nameRules: [
+        (v) => !!v || "Name is required",
+        (v) => (v && v.length <= 30) || "Name must be less",
+      ],
+      phonenumber: "",
+      phoneRules: [(v) => (v && v.length <= 11) || "Number must be less"],
+
+      emailRules: [
+        (v) => !!v || "E-mail is required",
+        (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      ],
+    };
+  },
+  methods: {
+    submitForm() {
+      this.loading = true;
+      apiClient.post("/contact", this.form).then((res) => {
+        console.log(res);
+        console.log(res.data);
+        if (res.data.ok) {
+          this.loading = false;
+          this.snackbar = true;
+          this.form = this.initializeForm();
+        }
+      });
     },
+    initializeForm: () => ({
+      id: "",
+      fullname: "",
+      email: "",
+      phoneno: "",
+      subject: "",
+      msg: "",
+    }),
   },
 };
 </script>
@@ -139,7 +172,7 @@ export default {
 <style>
 .contact {
   color: aqua;
-  background-color: rgba(44, 5, 5, 0.658);
+  background-color: #6d4c41;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;

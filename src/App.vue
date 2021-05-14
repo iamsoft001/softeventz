@@ -16,7 +16,12 @@
         </v-row>
         <nav-drawer />
       </v-navigation-drawer>
-      <v-app-bar app dark color="brown" class="hidden-md-and-up">
+      <v-app-bar
+        app
+        dark
+        flat
+        :color="$route.name == 'home' ? 'transparent' : 'brown darken-1'"
+      >
         <v-btn
           absolute
           right
@@ -26,7 +31,15 @@
           @click.stop="drawer = !drawer"
           ><v-icon>mdi-menu</v-icon></v-btn
         >
-        <v-toolbar-title>{{ appTitle }}</v-toolbar-title>
+        <v-row>
+          <v-col>
+            <h2>
+              <a href="/" class="text-decoration-none white--text"
+                >Soft Eventz</a
+              >
+            </h2>
+          </v-col>
+        </v-row>
       </v-app-bar>
       <main class="">
         <router-view></router-view>
@@ -45,7 +58,6 @@ import NavDrawer from "@/components/NavDrawer.vue";
 export default {
   name: "App",
   data: () => ({
-    appTitle: "Soft Eventz",
     drawer: false,
   }),
   components: { FooterPage, NavDrawer },

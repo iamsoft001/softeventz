@@ -398,7 +398,7 @@ export default {
 <style>
 .service {
   color: aqua;
-  background-color: rgba(44, 5, 5, 0.658);
+  background-color: #6d4c41;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
