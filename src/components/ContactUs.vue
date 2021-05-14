@@ -42,7 +42,7 @@
           <div>
             <span class="d-block" title="SoftConceptz">SoftConceptz</span>
             <span class="d-block" title="Adress"
-              >Top Floor,Christore Building.</span
+              >3rd Floor,Christore Building.</span
             >
             <span class="d-block" title="Location"
               >Ado_Ekiti. Ekiti State. Nigeria</span
