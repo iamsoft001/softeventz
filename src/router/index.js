@@ -24,6 +24,18 @@ const routes = [
       import(/* webpackChunkName: "services" */ "../views/Services.vue"),
   },
   {
+    path: "/admin",
+    name: "admin",
+    component: () =>
+      import(/* webpackChunkName: "admin" */ "../views/Admin.vue"),
+  },
+  {
+    path: "/dashboard",
+    name: "dashboard",
+    component: () =>
+      import(/* webpackChunkName: "dashboard" */ "../views/Dashboard.vue"),
+  },
+  {
     path: "/contact",
     name: "contact",
     component: () =>

@@ -34,16 +34,16 @@
         <v-row>
           <v-col>
             <h2>
-              <a href="/" class="text-decoration-none white--text"
-                >Soft Eventz</a
+              <router-link to="/" class="text-decoration-none white--text"
+                >Soft Eventz</router-link
               >
             </h2>
           </v-col>
         </v-row>
       </v-app-bar>
-      <main class="">
+      <v-main>
         <router-view></router-view>
-      </main>
+      </v-main>
 
       <v-footer color="brown darken-1" dark>
         <footer-page />
